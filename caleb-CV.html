@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caleb Álvarez Reyes - Especialista en Ciencia de Datos, Análisis Predictivo e Inteligencia Artificial Aplicada para Banca y Finanzas. Experiencia en sector público, Mercadotecnia Internacional y análisis con Python, R, SQL y Power BI.">
+  <title>Caleb Álvarez Reyes | Especialista en Ciencia de Datos y Análisis Predictivo</title>
+  <head>
+  <style>
+    .hero img {
+      width: 250px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #e0e0e0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-main: #f8f9fa;
+      --card-bg: #ffffff;
+      --primary: #0066cc;
+      --primary-dark: #0052a3;
+      --text-main: #1a1a1a;
+      --text-muted: #6c757d;
+      --border-light: #dee2e6;
+      --accent: #28a745;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero */
+    .hero {
+      background-color: var(--card-bg);
+      margin: 32px 0;
+      border-radius: 12px;
+      padding: 48px 32px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .location-contact {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 8px 25px rgba(0,102,204,0.15);
+    }
+
+    /* Secciones */
+    section {
+      background: var(--card-bg);
+      margin: 32px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    section h2 {
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .content {
+      padding: 32px;
+    }
+
+    .content p {
+      margin-bottom: 16px;
+    }
+
+    /* Lists */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+
+    ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Skills */
+    .skills-grid, .soft-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #e9ecef;
+      border-radius: 4px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background: var(--primary);
+      transition: width 1s ease;
+    }
+
+    /* Experience & Education */
+    .card {
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px;
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+    }
+
+    .date {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .tags {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #e7f1ff;
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    /* Education */
+    .education-item {
+      margin-bottom: 24px;
+    }
+
+    .education-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .education-item .institution {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .education-item .status {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin: 24px 0;
+      font-size: 1.1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin: 24px 0;
+      font-size: 1.8rem;
+    }
+
+    .contact a {
+      color: var(--text-muted);
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        gap: 16px;
+        font-size: 0.9rem;
+      }
+
+      .skills-grid, .soft-skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">CA</div>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#education">Formación</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Caleb Álvarez Reyes</h1>
+      <p class="tagline">Especialista en Ciencia de Datos, Análisis Predictivo e IA Aplicada | Mercadotecnia Internacional | Banca y Finanzas</p>
+      <p class="location-contact">Cuernavaca, Morelos, México • +52 777 260 6630</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Contáctame</a>
+        <a href="#experience" class="btn btn-secondary">Ver Experiencia</a>
+      </div>
+    </div>
+    <img src="caleb_profesional.png" alt="Foto profesional de Caleb Álvarez Reyes" width="200" height="200">
+
+  </section>
+
+  <section id="about">
+    <h2><i class="fas fa-user"></i> Perfil Profesional</h2>
+    <div class="content">
+      <p>Profesional en Mercadotecnia Internacional con especialización en Ciencia de Datos, Análisis Predictivo e Inteligencia Artificial Aplicada para Banca y Finanzas. Experiencia de más de seis años en el sector público, desarrollando estrategias de vinculación, programas de fortalecimiento juvenil y análisis de información institucional. Competente en el manejo de datos financieros mediante Python, R, SQL y Power BI, con habilidades en liderazgo, comunicación efectiva y optimización de reportes para la toma de decisiones estratégicas.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2><i class="fas fa-tools"></i> Habilidades Técnicas</h2>
+    <div class="content skills-grid">
+      <div class="skill-card">
+        <h3>Python, R, SQL</h3>
+        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        <span>Avanzado</span>
+      </div>
+      <div class="skill-card">
+        <h3>Power BI y Tableau</h3>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        <span>Avanzado</span>
+      </div>
+      <div class="skill-card">
+        <h3>Análisis Predictivo y Modelos (Supervisados / No Supervisados)</h3>
+        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        <span>Intermedio-Avanzado</span>
+      </div>
+      <div class="skill-card">
+        <h3>Diseño Gráfico (Adobe Illustrator, Photoshop, CorelDRAW)</h3>
+        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        <span>Intermedio</span>
+      </div>
+      <div class="skill-card">
+        <h3>Comercialización y Marketing Internacional</h3>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        <span>Avanzado</span>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 48px;"><i class="fas fa-handshake"></i> Habilidades Blandas</h2>
+    <div class="content soft-skills-grid">
+      <div class="skill-card">
+        <h3>Liderazgo</h3>
+      </div>
+      <div class="skill-card">
+        <h3>Pensamiento Analítico</h3>
+      </div>
+      <div class="skill-card">
+        <h3>Comunicación Efectiva</h3>
+      </div>
+      <div class="skill-card">
+        <h3>Adaptabilidad</h3>
+      </div>
+      <div class="skill-card">
+        <h3>Toma de Decisiones Estratégicas</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
+    <div class="content">
+      <div class="card">
+        <p class="date">Mayo 2024 – Presente</p>
+        <h3>Subdirector de Vinculación y Fortalecimiento</h3>
+        <p class="institution">Instituto Morelense de las Personas Adolescentes y Jóvenes (IMPAJOVEN)</p>
+        <ul>
+          <li>Dirección de estrategias de vinculación interinstitucional orientadas al fortalecimiento juvenil.</li>
+          <li>Implementación de proyectos de impacto social basados en análisis de datos y métricas de gestión.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Vinculación Interinstitucional</span>
+          <span class="tag">Análisis de Datos</span>
+          <span class="tag">Sector Público</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="date">Octubre 2018 – Junio 2024</p>
+        <h3>Jefe del Departamento de Inclusión</h3>
+        <p class="institution">Instituto Morelense de las Personas Adolescentes y Jóvenes (IMPAJOVEN)</p>
+        <ul>
+          <li>Coordinación de programas estatales para la inclusión social de adolescentes y jóvenes.</li>
+          <li>Análisis de datos sociales y elaboración de reportes estratégicos para toma de decisiones gubernamentales.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Gestión de Programas Sociales</span>
+          <span class="tag">Análisis de Datos Sociales</span>
+          <span class="tag">Toma de Decisiones</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="date">2017</p>
+        <h3>Prácticas Profesionales – Recursos Humanos</h3>
+        <p class="institution">Coca-Cola FEMSA</p>
+        <ul>
+          <li>Apoyo en procesos de reclutamiento, capacitación y control de indicadores de personal.</li>
+          <li>Gestión de bases de datos de personal y mejora de la eficiencia en procesos internos.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Recursos Humanos</span>
+          <span class="tag">Gestión de Bases de Datos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
+    <div class="content">
+      <div class="education-item">
+        <h3>Especialización en Ciencia de Datos, Análisis Predictivo e Inteligencia Artificial Aplicada para Banca y Finanzas</h3>
+        <p class="institution">Centro de Investigación e Innovación</p>
+        <p class="status">2025 (en curso)</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Certificación en Azure: Fundamentos para la Nube (Tecnologías Microsoft)</h3>
+        <p class="institution">Microsoft – INFOTEC</p>
+        <p class="status">2025 (en curso)</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Fundamentos de Python</h3>
+        <p class="institution">INFOTEC</p>
+        <p class="status">2025 (terminado satisfactoriamente, en espera del diploma)</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Curso Fundamentos del Desarrollo de Software</h3>
+        <p class="institution">INFOTEC</p>
+        <p class="status">2025 (terminado satisfactoriamente, en espera del diploma)</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Licenciatura en Mercadotecnia Internacional</h3>
+        <p class="institution">Universidad Abierta y a Distancia de México (UNADM)</p>
+        <p class="status">2018</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Diplomado en Comercialización Internacional y Procesos Aduaneros</h3>
+        <p class="institution">Asociación de Aduaneros en México</p>
+        <p class="status">2021</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Curso Creativo en Diseño Gráfico (Illustrator, Photoshop, CorelDRAW)</h3>
+        <p class="institution">CETEC, Xalapa</p>
+        <p class="status">2025</p>
+      </div>
+
+      <div class="education-item">
+        <h3>Estudios de Maestría en Ciencias Políticas</h3>
+        <p class="institution">El Colegio de Morelos</p>
+        <p class="status">Inconclusos</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><i class="fas fa-envelope"></i> Contacto</h2>
+    <div class="content contact">
+      <p>Estoy abierto a nuevas oportunidades en análisis de datos, banca, finanzas y proyectos de impacto social.</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:s.calbalvarez.87@gmail.com">s.calbalvarez.87@gmail.com</a></p>
+        <p><strong>Teléfono:</strong> +52 777 260 6630</p>
+        <p><strong>Ubicación:</strong> Cuernavaca, Morelos, México</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:s.calbalvarez.87@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/caleb-alvarez-reyes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <!-- Agrega GitHub o Portfolio si tienes: <a href="https://github.com/tuusuario"><i class="fab fa-github"></i></a> -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Caleb Álvarez Reyes | Hecho con pasión por los datos y la innovación</p>
+</footer>
+
+</body>
+</html>
